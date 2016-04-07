@@ -1,8 +1,11 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <iterator>
 
 using namespace std;
+
+enum sex{male,female};
 
 class Slav
 {
@@ -22,6 +25,7 @@ public:
 	
 	string name() { return _name; }
 	int id() { return _id; }
+	sex _sex(){return (_name[_name.length()-1]=='a') ? female : male;}
 
 	string description();
 };
