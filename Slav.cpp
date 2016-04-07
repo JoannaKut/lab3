@@ -15,7 +15,6 @@ void Slav::init()
 		back_inserter(names));
 	file.close();
 }
-
 Slav::Slav()
 {
 	static int amountOfNames = (init(), names.size());
