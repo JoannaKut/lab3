@@ -19,6 +19,13 @@ void Slav::init()
 Slav::Slav()
 {
 	static int amountOfNames = (init(), names.size());
+	/* Dochodzi tu do tzw. leniwej inicjalizacji (leniwa inicjalizacja jest to wzorzec 
+	projektowy polegający na opóźnianiu tworzenia obiektu, obliczania wartości lub przeprowadzania 
+	innych kosztownych operacji, aż do momentu pierwszego zapotrzebowania na nie)
+
+	Ze względu na wystąpienie słowa static linijka ta wykona się tylko jeden raz
+	init() wczytuje imiona z pliku tekstowego do wektora, zaś zmiennej amountOfNames 
+	przypisywana jest wartość names.size(), czyli ilość wczytanych imion */
 	_name = names[rand() % amountOfNames];
 	_id = _counter++;
 }
