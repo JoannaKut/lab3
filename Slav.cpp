@@ -18,7 +18,7 @@ void Slav::init()
 
 Slav::Slav()
 {
-	static int amountOfNames = (init(), names.size());
+	static int amountOfNames = (init(), names.size()); 
 	/* Dochodzi tu do tzw. leniwej inicjalizacji (leniwa inicjalizacja jest to wzorzec 
 	projektowy polegający na opóźnianiu tworzenia obiektu, obliczania wartości lub przeprowadzania 
 	innych kosztownych operacji, aż do momentu pierwszego zapotrzebowania na nie)

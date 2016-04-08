@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <iterator>
+
 
 using namespace std;
 
@@ -26,6 +28,5 @@ public:
 	int id() { return _id; }
 
 	string description();
-	
 	sex _sex(){return (_name[_name.length()-1]=='a') ? female : male;}
 };
