@@ -4,6 +4,8 @@
 
 using namespace std;
 
+enum sex{male,female};
+
 class Slav
 {
 private:
@@ -24,4 +26,6 @@ public:
 	int id() { return _id; }
 
 	string description();
+	
+	sex _sex(){return (_name[_name.length()-1]=='a') ? female : male;}
 };
